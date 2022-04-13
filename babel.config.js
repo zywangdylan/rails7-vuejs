@@ -34,8 +34,7 @@ module.exports = function(api) {
           modules: false,
           exclude: ['transform-typeof-symbol']
         }
-      ],
-      '@vue/babel-preset-jsx'
+      ]
     ].filter(Boolean),
     plugins: [
       'babel-plugin-macros',

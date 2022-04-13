@@ -1,0 +1,15 @@
+import Rails from 'rails-ujs';
+import Channels from 'channels';
+import Turbolinks from 'turbolinks';
+import * as ActiveStorage from 'activestorage';
+import 'jquery';
+import 'popper.js';
+import 'bootstrap';
+import 'bootstrap/dist/js/bootstrap';
+Rails.start();
+Turbolinks.start();
+ActiveStorage.start();
+import '../images/index.js.erb';
+import '../stylesheets/index.js.erb';
+import '../javascripts/index.js.erb';
+console.log('Loaded Application');

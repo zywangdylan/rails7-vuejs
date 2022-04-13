@@ -1,0 +1,18 @@
+// Run this example by adding <%%= javascript_pack_tag 'hello_erb' %> to the head of your layout file,
+// like app/views/layouts/application.html.erb. Don't forget to uncomment erb tag after adding it to your layout file.
+import Vue from 'vue/dist/vue.esm';
+import TurbolinksAdapter from 'vue-turbolinks';
+import Axios from 'axios';
+import VueAxios from 'vue-axios';
+
+Vue.use(VueAxios, Axios);
+Vue.use(TurbolinksAdapter);
+import '../filters/index.js.erb';
+import '../components/index.js.erb';
+document.addEventListener('turbolinks:load', () => {
+  const element = document.getElementById('app');
+  if (element != null) {
+    const app = new Vue({}).$mount(element);
+    console.log("Loaded Vue", app);
+  }
+});
